@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="algo.string.StringUtilTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-12-26T16:57:28" hostname="FRLFK0635009663" time="0.037">
+  <properties/>
+  <testcase name="[1] abc, true" classname="algo.string.StringUtilTest" time="0.031"/>
+  <testcase name="[2] abbb, false" classname="algo.string.StringUtilTest" time="0.001"/>
+  <testcase name="[3] (-5@9), true" classname="algo.string.StringUtilTest" time="0.001"/>
+  <system-out><![CDATA[97
+false
+98
+false
+99
+false
+97
+false
+98
+false
+98
+true
+40
+false
+45
+false
+53
+false
+64
+false
+57
+false
+41
+false
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
