@@ -1,6 +1,9 @@
 package algo.string;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class StringUtil {
     private StringUtil(){}
@@ -44,6 +47,34 @@ public class StringUtil {
         }
         if(Arrays.equals(chars_set1, chars_set2)) return true;
         else return false;
+    }
 
+    /**
+     * Check if it is a permutation of a palindrome.
+     * A palindrome is a word or phrase that is the same forwards and backwards.
+     * A permutation is a rearrangement of letters.
+     * The palindrome does not need to be limited to just dictionary words.
+     * EXAMPLE
+     * Input: Tact Coa
+     * Output: True (permutations: "taco cat", "atco eta", etc.)
+     * @param str given string
+     */
+    public static boolean isPalindromePermutation(String str){
+        Map<Character, Integer> charsMap = new HashMap<>();
+        for(int i=0; i<str.length(); i++){
+            Character c = str.toLowerCase().charAt(i);
+            if(c.equals(' ')) continue;
+            if(charsMap.containsKey(c)){
+                charsMap.put(c, charsMap.get(c)+1);
+            }else charsMap.put(c, 1);
+        }
+        boolean isImpair = false;
+        for(Integer num : charsMap.values()){
+            if(num % 2 != 0){
+                if(isImpair) return false;
+                else isImpair = true;
+            }
+        }
+        return true;
     }
 }

@@ -16,4 +16,10 @@ class StringUtilTest {
     void testCheckPermutation(String str1, String str2, boolean result){
         Assertions.assertEquals(result, StringUtil.checkPermutation(str1, str2));
     }
+
+    @ParameterizedTest
+    @CsvSource({"Tact Coa, true", "()tthhyu, false"})
+    void testIsPalindromePermutation(String str, boolean result){
+        Assertions.assertEquals(result, StringUtil.isPalindromePermutation(str));
+    }
 }
