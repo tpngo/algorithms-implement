@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="algo.string.StringUtilTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-12-27T15:36:01" hostname="FRLFK0635009663" time="0.032">
+<testsuite name="algo.string.StringUtilTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-12-27T16:05:01" hostname="FRLFK0635009663" time="0.042">
   <properties/>
-  <testcase name="[1] Tact Coa, true" classname="algo.string.StringUtilTest" time="0.029"/>
-  <testcase name="[2] ()tthhyu, false" classname="algo.string.StringUtilTest" time="0.001"/>
+  <testcase name="[1] abc, bca, true" classname="algo.string.StringUtilTest" time="0.036"/>
+  <testcase name="[2] abbb, bbbac, false" classname="algo.string.StringUtilTest" time="0.001"/>
+  <testcase name="[3] (-5@9), )-5@9(, true" classname="algo.string.StringUtilTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
