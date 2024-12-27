@@ -1,5 +1,7 @@
 package algo.string;
 
+import java.util.Arrays;
+
 public class StringUtil {
     private StringUtil(){}
     /**
@@ -23,5 +25,25 @@ public class StringUtil {
             chars_set[ascii_value] = true;
         }
         return true;
+    }
+
+    /**
+     *  Given two strings, write a method to decide if one is a permutation of the other.
+     */
+    public static boolean checkPermutation(String str1, String str2){
+        int[] chars_set1 = new int[128];
+        int[] chars_set2 = new int[128];
+        for(int i=0; i<str1.length(); i++){
+            int ascii_value = str1.charAt(i);
+            chars_set1[ascii_value]++;
+        }
+
+        for(int i=0; i<str2.length(); i++){
+            int ascii_value = str2.charAt(i);
+            chars_set2[ascii_value]++;
+        }
+        if(Arrays.equals(chars_set1, chars_set2)) return true;
+        else return false;
+
     }
 }

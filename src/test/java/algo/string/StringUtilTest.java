@@ -10,4 +10,10 @@ class StringUtilTest {
     void testContainsUniqueCharsacters(String str, boolean result){
         Assertions.assertEquals(result, StringUtil.containsUniqueCharacters(str));
     }
+
+    @ParameterizedTest
+    @CsvSource({"abc,bca,true", "abbb, bbbac, false", "(-5@9), )-5@9(,  true"})
+    void testCheckPermutation(String str1, String str2, boolean result){
+        Assertions.assertEquals(result, StringUtil.checkPermutation(str1, str2));
+    }
 }
